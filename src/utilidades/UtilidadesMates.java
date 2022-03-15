@@ -42,6 +42,21 @@ public class UtilidadesMates {
 
 		return tempFinal;
 	}
+	
+	/**
+	 * @param n
+	 * @return
+	 */
+	public static long calcularFactorial(int n) {
+		// complejidad ciclomática: 3
+		long factorial = 1L;
+		if (n >= 2) {
+			for (int i = n; i >= 2; i--) {
+				factorial = factorial * i;
+			}
+		}
+		return factorial;
+	}
 
 	/**
 	 * Método para calcular el salario bonificado que se percibe según el importe de
@@ -84,35 +99,7 @@ public class UtilidadesMates {
 	 * @return número de cifras del número Corresponde a Ejercicio 4 de la Colección
 	 *         5
 	 */
-	public static int contarCifras(int n) {
-		// complejidad ciclomática:3
-
-		int num_cifras = 0;
-		// si el número es negativo, lo pasamos a valor positivo
-		if (n < 0) {
-			n = (-1) * n;
-		}
-
-		while (n > 0) {
-			num_cifras++;
-			n = n / 10; // hacemos la división entera entre 10 en cada paso
-		}
-
-		return num_cifras;
-
-	}
-
-	public static long calcularFactorial(int n) {
-		// complejidad ciclomática: 3
-		long factorial = 1L;
-		if (n >= 2) {
-			for (int i = n; i >= 2; i--) {
-				factorial = factorial * i;
-			}
-		}
-		return factorial;
-	}
-
+	
 	public static String devolverImporteLiteral(int importeBillete) {
 		// complejidad ciclomática:7
 
